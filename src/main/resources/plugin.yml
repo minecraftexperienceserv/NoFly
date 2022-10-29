@@ -1,0 +1,7 @@
+name: NoFly
+version: '${project.version}'
+main: it.mcexp.NoFly
+api-version: 1.18
+commands:
+  disposal:
+    aliases: cestino
