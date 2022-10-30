@@ -13,14 +13,19 @@ public class JoinEvent implements Listener {
 
     Player player = event.getPlayer();
 
+    player.setAllowFlight(false);
+    player.setFlying(false);
+    player.setGameMode(org.bukkit.GameMode.SURVIVAL);
+    event.setJoinMessage(null);
+
     Bukkit.getScheduler().runTaskLater(Bukkit.getPluginManager().getPlugin("NoFly"), () -> {
 
         player.setAllowFlight(false);
         player.setFlying(false);
+        player.setGameMode(org.bukkit.GameMode.SURVIVAL);
+
 
     }, 40L);
-
-    event.setJoinMessage(null);
 
   }
 
